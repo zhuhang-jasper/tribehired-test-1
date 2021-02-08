@@ -4,7 +4,7 @@ require("custom-env").env(true, appRoot + "/config", true);
 const config = {
     environment: process.env.ENVIRONMENT,
     app: {
-        port: parseInt(process.env.APP_PORT) || 4300
+        port: parseInt(process.env.APP_PORT) || 3000
     },
     sdk: {
         tribehired: {

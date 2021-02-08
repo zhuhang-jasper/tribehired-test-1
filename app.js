@@ -40,6 +40,7 @@ const port = envConfig.app.port;
 console.log("---------------------------------------------------");
 console.log(" tRIBEhIRED tEST sERVER");
 app.listen(port, () => {
+    console.log("    NODE_ENV=" + envConfig.environment);
     console.log("    Application started. Listening at port: " + port);
     console.log("---------------------------------------------------");
 });
