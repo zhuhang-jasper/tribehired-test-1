@@ -22,10 +22,10 @@ router.get(getCommentsRoute, async function(req, res) {
 
         // Respond
         BaseController.respondSuccessBody(res, {
-            request: {
-                filterKey,
-                filterValue
-            },
+            // request: {
+            //     filterKey,
+            //     filterValue
+            // },
             result: filteredComments
         });
     } catch (err) {
