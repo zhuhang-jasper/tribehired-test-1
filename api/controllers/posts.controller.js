@@ -12,7 +12,8 @@ postsRouter.get(getTopPostsRoute, async function(req, res) {
         // TODO: Process Request
 
         // TODO: Logic
-        const all = await THSdkService.Posts.getAllPosts();
+        const posts = await THSdkService.Posts.getAllPosts();
+        const comments = await THSdkService.Comments.getAllComments();
         // const sorted = all.map((post) => {
         //     return {
         //         post_id: "",
@@ -23,7 +24,7 @@ postsRouter.get(getTopPostsRoute, async function(req, res) {
         // }).sort((a, b) => (a.total_number_of_comments < b.total_number_of_comments) ? 1 : -1);
 
         BaseController.respondSuccessBody(res, {
-            result: all
+            result: posts
         });
     } catch (err) {
         BaseController.respondError(res, err);
