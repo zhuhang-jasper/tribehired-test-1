@@ -13,7 +13,7 @@ module.exports = class THCommentsSdk extends BaseSdk {
     }
 
     async getAllComments() {
-        console.debug("Calling TH API: getAllPosts()");
+        // console.debug("Calling TH API: getAllComments()");
 
         try {
             const url = this.registerEndPoint(arguments, ENDPOINT_GET_ALL_COMMENTS);

@@ -14,7 +14,7 @@ module.exports = class THPostsSdk extends BaseSdk {
     }
 
     async getAllPosts() {
-        console.debug("Calling TH API: getAllPosts()");
+        // console.debug("Calling TH API: getAllPosts()");
 
         try {
             const url = this.registerEndPoint(arguments, ENDPOINT_GET_ALL_POSTS);
