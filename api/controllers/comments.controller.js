@@ -12,10 +12,13 @@ router.get(getCommentsRoute, async function(req, res) {
         // TODO: Validate Request
         const filterKey = req.query.filterKey;
         const filterValue = req.query.filterValue;
+        const exactMatch = (req.query.exactMatch == "true");
 
         // Logic
         const comments = await THSdkService.Comments.getAllComments();
-        const filteredComments = comments.filter((comment) => comment[filterKey] == filterValue);
+        const filteredComments = comments.filter((comment) => {
+            return comment[filterKey] && (!exactMatch ? String(comment[filterKey]).includes(filterValue) : String(comment[filterKey]) == filterValue);
+        });
 
         // Respond
         BaseController.respondSuccessBody(res, {
