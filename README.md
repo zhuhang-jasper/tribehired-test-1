@@ -1,6 +1,6 @@
 # tribehired-test-1
 
-###Setup:
+### Setup:
 
 ```
 npm install
@@ -8,7 +8,7 @@ npm start
 ```
 
 
-###API:
+### API:
 
 * GET /v1/posts/top
 
